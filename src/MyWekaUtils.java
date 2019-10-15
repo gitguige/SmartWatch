@@ -155,7 +155,8 @@ public class MyWekaUtils {
 //    	System.out.println(directory.getAbsolutePath());
     	try {
             //  first get the full features file
-    		String[][] csvData = MyWekaUtils.readCSV("./resources/features_12_1000ms.csv");  
+//    		String[][] csvData = MyWekaUtils.readCSV("./resources/old_data/features_1000ms.csv");  
+    		String[][] csvData = MyWekaUtils.readCSV("./resources/features_12_3000ms.csv");  
     		
     		double best_accuracy = 0,pre_best_accuracy=0;
     		int best_index = 0,best_feature=0;  
@@ -165,6 +166,15 @@ public class MyWekaUtils {
 //            int[] features = {0, 1, 2, 3, 4, 5}; // all the features
 //			int[] features = {0, 2, 5}; // use mean_x, mean_y, std_z 
             
+//            //manual option, only for debug===============================================
+//            int[] features = {0, 1, 2, 3, 4, 5}; // all the features
+//            String arffData = MyWekaUtils.csvToArff(csvData, features);
+////            System.out.println(arffData);
+//            
+//            double accuracy = MyWekaUtils.classify(arffData, 1);
+//            System.out.println(accuracy);
+            
+            //automatic option===========================================================
             while(select_num <12) {
 //	            for(int k=0;k<unselect_num;k++)
 //	            	System.out.println(features_unselect[k]);

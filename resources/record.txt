@@ -1,0 +1,33 @@
+1. 97.00680272108843 old_data    95.70866141732283 old_data + new_data windows=1000ms (diff decrease)
+2. windows=2s, acc=95.72784810126582
+   windows=3s, acc=97.4820143884892
+   windows=4s, acc=97.1107544141252
+3. select windows=3000ms
+   12 features, acc = 96.1630695443645
+   windows=1s, acc=94.64566929133858
+   windows=2s, acc=95.64873417721519
+   windows=4s, acc=95.98715890850723
+
+4. Best_feature=9
+Best_accuracy=93.5251798561151
+Best_feature=0
+Best_accuracy=96.40287769784173
+Stop iteration! Accuracy improvement=0.8706467661691475%
+Selected features=[9,0]
+
+5. 
+option=2, random forest
+Best_feature=9
+Best_accuracy=91.24700239808153
+Best_feature=2
+Best_accuracy=96.88249400479616
+Stop iteration! Accuracy improvement=0.4950495049504955%
+Selected features=[9,2]
+
+option=3, SVM
+Best_feature=9
+Best_accuracy=93.88489208633094
+Best_feature=3
+Best_accuracy=96.1630695443645
+Stop iteration! Accuracy improvement=0.24937655860350905%
+Selected features=[9,3]
