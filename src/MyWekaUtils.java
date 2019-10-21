@@ -186,9 +186,9 @@ public class MyWekaUtils {
             	
 	            for(int i=0;i<unselect_num;i++) {
 	            	features[select_num] = features_unselect[i];	  //add a new feature   
-//	            	System.out.println("features=");
-//	            	for(int k=0;k<features.length;k++)
-//	            		System.out.println(features[k]);
+	            	System.out.println("features=");
+	            	for(int k=0;k<features.length;k++)
+	            		System.out.println(features[k]);
 	            	
 		            String arffData = MyWekaUtils.csvToArff(csvData, features);
 //		            System.out.println(arffData);
@@ -199,12 +199,14 @@ public class MyWekaUtils {
 		            	best_accuracy = accuracy;
 		            	best_index = i;
 		            	best_feature = features_unselect[i];
-		            }    
+		            } 
+		            System.out.println("Accuracy="+accuracy);
 	            }
 	            if(best_accuracy>1.01*pre_best_accuracy) { //update only when improvement is larger than 1%
-	            	pre_best_accuracy = best_accuracy;
 		            System.out.println("Best_feature="+best_feature);
 		            System.out.println("Best_accuracy="+best_accuracy);
+	            	System.out.println("Accuracy improvement="+100*(best_accuracy/pre_best_accuracy-1)+"%");
+	            	pre_best_accuracy = best_accuracy;
 		            features_select[select_num] = best_feature;
 		            select_num++;	            
 	            	
@@ -217,6 +219,9 @@ public class MyWekaUtils {
 		            unselect_num--;
 	            }
 	            else {
+		            System.out.println("Best_feature="+best_feature);
+		            System.out.println("Best_accuracy="+best_accuracy);
+	            	
 	            	System.out.println("Stop iteration! Accuracy improvement="+100*(best_accuracy/pre_best_accuracy-1)+"%");
 	            	break;
 	            }          
