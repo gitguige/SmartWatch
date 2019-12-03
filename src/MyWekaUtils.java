@@ -167,7 +167,8 @@ public class MyWekaUtils {
 //			int[] features = {0, 2, 5}; // use mean_x, mean_y, std_z 
             
 //            //manual option, only for debug===============================================
-//            int[] features = {0, 1, 2, 3, 4, 5}; // all the features
+////            int[] features = {0, 1, 2, 3, 4, 5}; // all the features
+//            int[] features = {0, 1, 2, 3, 4, 5,6,7,8,9,10,11}; // all the features
 //            String arffData = MyWekaUtils.csvToArff(csvData, features);
 ////            System.out.println(arffData);
 //            
